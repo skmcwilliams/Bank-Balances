@@ -44,13 +44,7 @@ while counter:
 for filename in os.listdir(path):
     with open (os.path.join(path,filename)) as json_file:
         data = json.load(json_file)
-        
-        #Code starts here
-        """Each function prints about 50 times and I cannot figure out why
-        after about 10 hours of struggling. The functions also overlap
-        and become tough to read, no amount of time.sleep() helped this."""
-        
-        
+
         """pull balances from json file"""
         bal = list(map(lambda i: i['balance'], data))
         print(bal)
